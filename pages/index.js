@@ -16,7 +16,7 @@ export default function Halaman1() {
 	  <h1 className="text-xl font-bold mb-4">Halaman 1 - Monitor 1 s/d 6</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => (
-          <div key={cctv.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-md">
+          <div key={cctv.id} className="w-full aspect-video bg-black rounded-xl overflow-hidden">
             <div className="relative w-full h-48 overflow-hidden">
               <iframe
                 className="w-full h-full"
