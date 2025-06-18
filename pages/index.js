@@ -43,9 +43,6 @@ export default function Halaman1() {
         by <span className="text-white font-semibold"><a href="https://www.instagram.com/caksoega/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">@caksoega</a></span>
 	<p>sumber :<a href="https://dishub.bondowosokab.go.id/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">www.dishub.bondowosokab.go.id</a></p>
       </div>
-  	<div className="text-center mt-8">
-	<p>sumber :<a href="https://dishub.bondowosokab.go.id/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">www.dishub.bondowosokab.go.id</a></p>
-	</div>
     </div>
   );
 }
