@@ -13,7 +13,7 @@ export default function Halaman1() {
   return (
     <div className="min-h-screen bg-black text-white p-4">
       <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
-      <h6><center>Halaman 3 - Monitor 13 s/d 15</center></h6>
+      <h7><center>Halaman 1 - Monitor 1 s/d 6</center></h7>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => {
