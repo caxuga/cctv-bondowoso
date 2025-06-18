@@ -49,6 +49,9 @@ export default function Halaman1() {
 
       {/* FOOTER */}
       <div className="mt-10 text-center text-sm text-gray-400">
+<p>
+<img src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray" />
+</p>
         by{' '}
         <span className="text-white font-semibold">
           <a
@@ -71,9 +74,6 @@ export default function Halaman1() {
             www.dishub.bondowosokab.go.id
           </a>
         </p>
-
-        {/* HIT COUNTER */}
-          <img src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray" />
       </div>
       {/* END OF FOOTER */}
     </div>
