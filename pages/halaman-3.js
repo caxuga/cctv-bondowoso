@@ -31,7 +31,7 @@ export default function Halaman3() {
         {cctvList.map((cctv) => (
           <div key={cctv.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-md">
             <iframe
-              className="w-full h-48"
+              className="w-full h-full"
               src={`https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`}
               allowFullScreen
             ></iframe>
