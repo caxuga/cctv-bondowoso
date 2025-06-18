@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const cctvList = [
@@ -10,6 +11,15 @@ const cctvList = [
 ];
 
 export default function Halaman1() {
+  const [visitorCount, setVisitorCount] = useState(null);
+
+  useEffect(() => {
+    // Tambahkan hit dan ambil jumlahnya
+    fetch('https://api.countapi.xyz/hit/cctv-bondowoso.vercel.app/visits')
+      .then(res => res.json())
+      .then(data => setVisitorCount(data.value));
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white p-4">
       <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
@@ -49,17 +59,20 @@ export default function Halaman1() {
 
       {/* FOOTER */}
       <div className="mt-10 text-center text-sm text-gray-400">
-        by{' '}
-        <span className="text-white font-semibold">
-          <a
-            href="https://www.instagram.com/caksoega/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-white"
-          >
-            @caksoega
-          </a>
-        </span>
+        <p>Pengunjung: <span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
+        <p>
+          by{' '}
+          <span className="text-white font-semibold">
+            <a
+              href="https://www.instagram.com/caksoega/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white"
+            >
+              @caksoega
+            </a>
+          </span>
+        </p>
         <p>
           sumber :{' '}
           <a
@@ -72,8 +85,7 @@ export default function Halaman1() {
           </a>
         </p>
       </div>
-	   {/* END OF FOOTER */}
-
+      {/* END OF FOOTER */}
     </div>
   );
 }
