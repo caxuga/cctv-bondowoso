@@ -48,11 +48,13 @@ export default function Halaman2() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => (
           <div key={cctv.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-md">
+            <div className="relative w-full h-48 overflow-hidden">
             <iframe
               className="w-full h-48"
               src={`https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`}
               allowFullScreen
             ></iframe>
+	</div>
             <div className="p-2 text-center font-semibold text-sm">
               {`Monitor #${cctv.id} - ${cctv.name}`}
             </div>
