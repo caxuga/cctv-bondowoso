@@ -17,7 +17,7 @@ export default function Halaman1() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => (
           <div key={cctv.id} className="w-full aspect-video bg-black rounded-xl overflow-hidden">
-            <div className="relative w-full h-48 overflow-hidden">
+            <div className="w-full h-full">
               <iframe
                 className="w-full h-full"
                 src={`https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`}
