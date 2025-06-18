@@ -45,6 +45,21 @@ export default function Halaman1() {
 		<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=11ae215e16cbc60a533bb49f8f0e774125a10904'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1352841/t/5"></script>
       </div>
+  <div className="text-center mt-8">
+  <a href="https://www.free-counters.org/" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm">
+    www.free-Counter.org
+  </a>
+
+  <Script
+    src="https://www.freevisitorcounters.com/auth.php?id=11ae215e16cbc60a533bb49f8f0e774125a10904"
+    strategy="afterInteractive"
+  />
+  <Script
+    src="https://www.freevisitorcounters.com/en/home/counter/1352841/t/5"
+    strategy="afterInteractive"
+  />
+</div>
+
     </div>
   );
 }
