@@ -73,7 +73,7 @@ export default function Halaman1() {
         </p>
       </div>
 	   {/* END OF FOOTER */}
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://cctv-bondowoso.vercel.app&count_bg=%2300BFFF&title=Pengunjung&edge_flat=false"/>
+
     </div>
   );
 }
