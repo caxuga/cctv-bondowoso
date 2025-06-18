@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const cctvList = [
@@ -11,15 +10,6 @@ const cctvList = [
 ];
 
 export default function Halaman1() {
-  const [visitorCount, setVisitorCount] = useState(null);
-
-  useEffect(() => {
-    // Tambahkan hit dan ambil jumlahnya
-    fetch('https://api.countapi.xyz/hit/cctv-bondowoso.vercel.app/visits')
-      .then(res => res.json())
-      .then(data => setVisitorCount(data.value));
-  }, []);
-
   return (
     <div className="min-h-screen bg-black text-white p-4">
       <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
@@ -59,19 +49,17 @@ export default function Halaman1() {
 
       {/* FOOTER */}
       <div className="mt-10 text-center text-sm text-gray-400">
-        <p>
-          by{' '}
-          <span className="text-white font-semibold">
-            <a
-              href="https://www.instagram.com/caksoega/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              @caksoega
-            </a>
-          </span>
-        </p>
+        by{' '}
+        <span className="text-white font-semibold">
+          <a
+            href="https://www.instagram.com/caksoega/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            @caksoega
+          </a>
+        </span>
         <p>
           sumber :{' '}
           <a
@@ -83,7 +71,15 @@ export default function Halaman1() {
             www.dishub.bondowosokab.go.id
           </a>
         </p>
-<p><span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
+
+        {/* HIT COUNTER */}
+        <div className="mt-4">
+          <p className="mb-1">Jumlah pengunjung:</p>
+          <img
+            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fcctv-bondowoso.vercel.app&count_bg=%2379C83D&title_bg=%23555555&icon=eye.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false"
+            alt="Hit Counter"
+          />
+        </div>
       </div>
       {/* END OF FOOTER */}
     </div>
