@@ -83,7 +83,7 @@ export default function Halaman1() {
             www.dishub.bondowosokab.go.id
           </a>
         </p>
-<p>Pengunjung: <span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
+<p><span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
       </div>
       {/* END OF FOOTER */}
     </div>
