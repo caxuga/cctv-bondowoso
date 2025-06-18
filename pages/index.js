@@ -14,7 +14,7 @@ export default function Halaman1() {
     <div className="min-h-screen bg-black text-white p-4">
       <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
       <h7><center>Halaman 1 - Monitor 1 s/d 6</center></h7>
-
+<hr className="border-t border-gray-700 mb-4 w-1/2 mx-auto" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => {
           const streamUrl = `/monitor/${cctv.id}`;
@@ -46,6 +46,7 @@ export default function Halaman1() {
           </button>
         </Link>
       </div>
+<hr className="mt-10 mb-4 border-t border-gray-700" />
 
       {/* FOOTER */}
 <p>
