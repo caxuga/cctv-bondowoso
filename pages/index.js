@@ -59,7 +59,6 @@ export default function Halaman1() {
 
       {/* FOOTER */}
       <div className="mt-10 text-center text-sm text-gray-400">
-        <p>Pengunjung: <span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
         <p>
           by{' '}
           <span className="text-white font-semibold">
@@ -84,6 +83,7 @@ export default function Halaman1() {
             www.dishub.bondowosokab.go.id
           </a>
         </p>
+<p>Pengunjung: <span className="text-white font-semibold">{visitorCount ?? '...'}</span></p>
       </div>
       {/* END OF FOOTER */}
     </div>
