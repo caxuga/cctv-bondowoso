@@ -19,9 +19,8 @@ export default function Halaman3() {
 
   return (
     <div className="min-h-screen bg-black text-white p-4 relative">
-      <h1 className="text-xl font-bold mb-4">CCTV BONDOWOSO</h1>
-      <h1 className="text-xl font-bold mb-4">Halaman 3 - Monitor 13 s/d 15</h1>
-
+      <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
+      <h6><center>Halaman 3 - Monitor 13 s/d 15</center></h6>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => {
           const streamUrl = `https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`;
@@ -47,14 +46,16 @@ export default function Halaman3() {
         })}
       </div>
 
-      <div className="flex justify-between mt-6">
+      <div className="flex justify-center mt-6">
         <Link href="/halaman-2">
-          <button className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded text-white">
-            Halaman 2
+          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">
+            ◄ Halaman 2
           </button>
         </Link>
+      </div>
+	  <div className="flex justify-center mt-6">
         <Link href="/">
-          <button className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded text-white">
+          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white">
             Halaman Depan
           </button>
         </Link>
