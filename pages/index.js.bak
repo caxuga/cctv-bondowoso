@@ -1,0 +1,121 @@
+import { useState } from "react";
+
+const monitors = [
+  {
+    title: "Monitor #1 - MPM KOTAKULON",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=11&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #2 - BANK JATIM",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=4&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #3 - PENDOPO",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=3&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #4 - PASAR INDUK",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=22&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #5 - YIMA BARAT",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=20&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #6 - BATAAN",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=6&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #7 - KOTAKULON 1",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=5&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #8 - KANTOR POS",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=10&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #9 - HOTEL PALM",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=19&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #10 - RSUD KOESNADI",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=18&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #11 - PENGAIRAN BARAT",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=14&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #12 - POM TAMANSARI",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=13&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #13 - GANESHA",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=16&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #14 - BUNDARAN NANGKAAN",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=9&user=view&pass=K0minfo",
+  },
+  {
+    title: "Monitor #15 - KONCER",
+    src: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=8&user=view&pass=K0minfo",
+  },
+];
+
+export default function Home() {
+  const [active, setActive] = useState(null);
+
+  return (
+    <div className="min-h-screen bg-black text-white p-4">
+      <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center">
+        Live CCTV Bondowoso
+      </h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {monitors.map((monitor, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition cursor-pointer"
+            onClick={() => setActive(monitor)}
+          >
+            <img
+              src={monitor.src}
+              alt={monitor.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-2 text-center text-sm font-medium">{monitor.title}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Modal */}
+      {active && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center"
+          onClick={() => setActive(null)}
+        >
+          <div
+            className="relative w-full h-full flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-4 right-4 text-white text-3xl bg-transparent hover:text-red-400"
+              onClick={() => setActive(null)}
+            >
+              ✕
+            </button>
+            <h2 className="mb-4 text-xl md:text-2xl font-semibold text-white text-center">
+              {active.title}
+            </h2>
+            <img
+              src={active.src}
+              alt={active.title}
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
