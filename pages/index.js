@@ -48,13 +48,13 @@ export default function Halaman1() {
       </div>
 
       {/* FOOTER */}
-      <div className="mt-10 text-center text-sm text-gray-400">
 <p>
 <center>
 <img src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray" />
 </center>
 </p>
 <hr>
+      <div className="mt-10 text-center text-sm text-gray-400">
         by{' '}
         <span className="text-white font-semibold">
           <a
