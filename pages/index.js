@@ -20,7 +20,7 @@ export default function Halaman1() {
             <div className="relative w-full h-48 overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src={`https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`}
+                src={`https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=80&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`}
                 allowFullScreen
               ></iframe>
             </div>
