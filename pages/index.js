@@ -76,6 +76,7 @@ export default function Halaman1() {
         </p>
       </div>
       {/* END OF FOOTER */}
+<div id="histats_counter" className="flex justify-center items-center" />
     </div>
   );
 }
