@@ -41,15 +41,43 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        {/* Histats Counter Visual */}
+        {/* FOOTER */}
         <footer className="mt-10 text-center text-sm text-gray-400 py-6 border-t border-gray-700">
-          <div id="histats_counter" className="flex justify-center items-center" />
-          <noscript>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              <img src="//sstatic1.histats.com/0.gif?1509227&101" alt="counter" border="0" />
-            </a>
-          </noscript>
+          <div className="text-center text-sm text-gray-400">
+            by{' '}
+            <span className="text-white font-semibold">
+              <a
+                href="https://www.instagram.com/caksoega/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                @caksoega
+              </a>
+            </span>
+            <p>
+              sumber:{' '}
+              <a
+                href="https://dishub.bondowosokab.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                www.dishub.bondowosokab.go.id
+              </a>
+            </p>
+          </div>
+
+          {/* Histats Counter Visual */}
+          <div id="histats_counter" className="flex justify-center items-center mt-4" />
         </footer>
+
+        {/* Noscript outside JSX */}
+        <noscript>
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            <img src="//sstatic1.histats.com/0.gif?1509227&101" alt="counter" border="0" />
+          </a>
+        </noscript>
       </body>
     </Html>
   );
