@@ -48,6 +48,31 @@ export default function Halaman1() {
           </button>
         </Link>
       </div>
+{/* FOOTER */}
+      <div className="text-center text-sm text-gray-400">
+        by{' '}
+        <span className="text-white font-semibold">
+          <a
+            href="https://www.instagram.com/caksoega/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            @caksoega
+          </a>
+        </span>
+        <p>
+          sumber :{' '}
+          <a
+            href="https://dishub.bondowosokab.go.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-white"
+          >
+            www.dishub.bondowosokab.go.id
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
