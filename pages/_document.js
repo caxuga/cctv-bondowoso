@@ -16,12 +16,40 @@ export default function Document() {
         <meta name="twitter:description" content="Pantauan CCTV di berbagai titik wilayah Kabupaten Bondowoso secara langsung." />
         <meta name="twitter:image" content="https://cctv-bondowoso.vercel.app/thumbnail.jpg" />
 
-        {/* (Opsional) Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Histats Script */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _Hasync = _Hasync || [];
+              _Hasync.push(['Histats.start', '1,1509227,4,4006,112,61,00011101']);
+              _Hasync.push(['Histats.fasi', '1']);
+              _Hasync.push(['Histats.track_hits', '']);
+              (function() {
+                var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                hs.src = ('//s10.histats.com/js15_as.js');
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+              })();
+            `,
+          }}
+        />
       </Head>
+
       <body className="antialiased bg-black text-white">
         <Main />
         <NextScript />
+
+        {/* Histats Counter Visual */}
+        <footer className="mt-10 text-center text-sm text-gray-400 py-6 border-t border-gray-700">
+          <div id="histats_counter" className="flex justify-center items-center" />
+          <noscript>
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              <img src="//sstatic1.histats.com/0.gif?1509227&101" alt="counter" border="0" />
+            </a>
+          </noscript>
+        </footer>
       </body>
     </Html>
   );
