@@ -12,9 +12,11 @@ const cctvList = [
 export default function Halaman1() {
   return (
     <div className="min-h-screen bg-black text-white p-4">
-      <h1 className="text-xl font-bold mb-4"><center>CCTV BONDOWOSO</center></h1>
-      <h7><center>Halaman 1 - Monitor 1 s/d 6</center></h7>
-<hr className="border-t border-gray-700 mb-4 w-1/2 mx-auto" />
+      <h1 className="text-xl font-bold mb-2 text-center">CCTV BONDOWOSO</h1>
+      <h2 className="text-md mb-4 text-center">Halaman 1 - Monitor 1 s/d 6</h2>
+
+      <hr className="border-t border-gray-700 mb-6 w-1/2 mx-auto" />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => {
           const streamUrl = `/monitor/${cctv.id}`;
@@ -46,12 +48,19 @@ export default function Halaman1() {
           </button>
         </Link>
       </div>
-<hr className="mt-10 mb-4 border-t border-gray-700" />
+
+      <hr className="mt-10 mb-4 border-t border-gray-700" />
 
       {/* FOOTER */}
-<img src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray" />
-<hr>
-      <div className="mt-10 text-center text-sm text-gray-400">
+      <div className="text-center">
+        <img
+          src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray"
+          alt="visitor counter"
+          className="mx-auto mb-2"
+        />
+      </div>
+
+      <div className="text-center text-sm text-gray-400">
         by{' '}
         <span className="text-white font-semibold">
           <a
@@ -75,7 +84,6 @@ export default function Halaman1() {
           </a>
         </p>
       </div>
-      {/* END OF FOOTER */}
     </div>
   );
 }
