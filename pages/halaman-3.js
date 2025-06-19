@@ -11,7 +11,7 @@ export default function Halaman3() {
     <div className="min-h-screen bg-black text-white p-4">
       <h1 className="text-xl font-bold mb-4 text-center">CCTV BONDOWOSO</h1>
       <h7><center>Halaman 3 - Monitor 13 s/d 15</center></h7>
-
+ <hr className="border-t border-gray-700 mb-6 w-1/2 mx-auto" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {cctvList.map((cctv) => {
           const streamUrl = `https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=${cctv.monitor}&user=view&pass=K0minfo&rand=${Date.now()}&connkey=${cctv.connkey}`;
