@@ -52,14 +52,6 @@ export default function Halaman1() {
       <hr className="mt-10 mb-4 border-t border-gray-700" />
 
       {/* FOOTER */}
-      <div className="text-center">
-        <img
-          src="https://hits.sh/cctv-bondowoso.vercel.app.svg?style=flat-square&label=visitor&color=blue&labelColor=gray"
-          alt="visitor counter"
-          className="mx-auto mb-2"
-        />
-      </div>
-
       <div className="text-center text-sm text-gray-400">
         by{' '}
         <span className="text-white font-semibold">
