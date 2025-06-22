@@ -41,10 +41,27 @@ export default function Document() {
         <Main />
         <NextScript />
 
+        {/* Tawk.to Live Chat Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+              (function(){
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/68561b05c44c79190f9881b6/1iu85j53s';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+              })();
+            `,
+          }}
+        />
+
         {/* FOOTER */}
         <footer className="mt-10 text-center text-sm text-gray-400 py-6 border-t border-gray-700">
           <div className="text-center text-sm text-gray-400">
-            by{' '}
+            by{" "}
             <span className="text-white font-semibold">
               <a
                 href="https://www.instagram.com/caksoega/"
@@ -56,7 +73,7 @@ export default function Document() {
               </a>
             </span>
             <p>
-              sumber:{' '}
+              sumber:{" "}
               <a
                 href="https://dishub.bondowosokab.go.id/"
                 target="_blank"
@@ -69,10 +86,10 @@ export default function Document() {
           </div>
 
           {/* Histats Counter Visual */}
-          <div id="histats_counter" className="flex justify-center items-center mt-4" />
+          <div id="histats_counter" className="flex justify-center items-center mt-4"></div>
         </footer>
 
-        {/* Noscript outside JSX */}
+        {/* Noscript fallback */}
         <noscript>
           <a href="/" target="_blank" rel="noopener noreferrer">
             <img src="//sstatic1.histats.com/0.gif?1509227&101" alt="counter" border="0" />
