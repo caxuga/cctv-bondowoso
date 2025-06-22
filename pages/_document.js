@@ -41,23 +41,6 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        {/* Tawk.to Live Chat Script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-              (function(){
-                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-                s1.async = true;
-                s1.src = 'https://embed.tawk.to/68561b05c44c79190f9881b6/1iu85j53s';
-                s1.charset = 'UTF-8';
-                s1.setAttribute('crossorigin', '*');
-                s0.parentNode.insertBefore(s1, s0);
-              })();
-            `,
-          }}
-        />
-
         {/* FOOTER */}
         <footer className="mt-10 text-center text-sm text-gray-400 py-6 border-t border-gray-700">
           <div className="text-center text-sm text-gray-400">
