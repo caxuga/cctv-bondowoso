@@ -18,7 +18,7 @@ export default function Halaman1() {
   const [pesan, setPesan] = useState('');
 
   useEffect(() => {
-    const chatRef = ref(db, 'guestchat/');
+    const chatRef = ref(db, 'guestchat');
     onValue(chatRef, (snapshot) => {
       const data = snapshot.val();
       const msgArray = data
@@ -30,7 +30,7 @@ export default function Halaman1() {
 
   const kirimPesan = async () => {
     if (!nama.trim() || !pesan.trim()) return;
-    const chatRef = ref(db, 'guestchat/');
+    const chatRef = ref(db, 'guestchat');
     await push(chatRef, {
       nama,
       text: pesan,
@@ -78,6 +78,7 @@ export default function Halaman1() {
         </Link>
       </div>
 <hr className="border-t border-gray-700 mb-6 w-1/2 mx-auto" />
+
  {/* Guest Chat Box */}
       <div className="bg-gray-900 p-4 rounded-lg max-w-2xl mx-auto mb-8">
         <h2 className="text-lg font-bold mb-2 text-center">💬 Live Chat</h2>
@@ -114,7 +115,7 @@ export default function Halaman1() {
           </div>
         </div>
       </div>
-
+{/* Guest Chat Box */}
     </div>
   );
 }

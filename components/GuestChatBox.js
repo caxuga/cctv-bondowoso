@@ -12,7 +12,7 @@ export default function ChatBox() {
     e.preventDefault();
     if (!pesan.trim() || !nama.trim()) return;
 
-    const chatRef = ref(db, 'pesan');
+    const chatRef = ref(db, 'guestchat');
     const newChat = {
       nama,
       pesan,
@@ -23,7 +23,7 @@ export default function ChatBox() {
   };
 
   useEffect(() => {
-    const chatRef = ref(db, 'pesan');
+    const chatRef = ref(db, 'guestchat');
     onValue(chatRef, (snapshot) => {
       const data = snapshot.val();
       const list = data ? Object.entries(data).map(([id, val]) => ({ id, ...val })) : [];
